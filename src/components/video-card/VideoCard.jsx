@@ -7,11 +7,11 @@ const VideoCard = ({ video }) => {
   // console.log(video)
 
   return (
-    <Card sx={{ width: '308px', boxShadow: 'none', borderRadius: 0 }}>
+    <Card sx={{ width: { xs: '100%', sm: '350px', md: '308px' }, boxShadow: 'none', borderRadius: 0 }}>
       <CardMedia 
         image={video?.snippet?.thumbnails?.high?.url} 
         alt={video?.snippet?.title}
-        sx={{ width: '350px', height: '180px' }}
+        sx={{ width: { xs: '100%', sm: '350px' }, height: { xs: '220px', sm: '200px', md: '180px' } }}
       />
 
       <CardContent sx={{ background: colors.primary, height: '210px', position: 'relative' }}>
@@ -22,7 +22,7 @@ const VideoCard = ({ video }) => {
           <Typography variant='subtitle1' fontWeight={'bold'}>
             {video?.snippet?.title.slice(0, 52)}
           </Typography>
-          <Typography variant='subtitle2' sx={{ opacity: '.6' }}>{video?.snippet?.description.slice(0, 77)}</Typography>
+          <Typography variant='subtitle2' sx={{ opacity: '.6' }}>{video?.snippet?.description.slice(0, 72)}</Typography>
         </>
         <>
           <Stack 
@@ -36,7 +36,7 @@ const VideoCard = ({ video }) => {
             <Typography variant={'subtitle2'} color={'gray'}>
               {video?.snippet?.channelTitle}
             </Typography>
-            <CheckCircle sx={{ fontSize: '14px', color: 'gray', ml: '4px' }} />
+            <CheckCircle sx={{ fontSize: '14px', color: 'gray', ml: '3px' }} />
           </Stack>
         </>
       </CardContent>

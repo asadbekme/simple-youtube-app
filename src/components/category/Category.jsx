@@ -12,8 +12,8 @@ const Category = ({ selectedCategory, selectedCategoryHandler }) => {
             className='category-btn' 
             style={{ 
               borderRadius: '0', 
-              background: item.name === selectedCategory && colors.secondary,
-              color: item.name === selectedCategory && '#fff'
+              background: (item.name === selectedCategory) && colors.secondary,
+              color: (item.name === selectedCategory) && '#fff'
             }}
             onClick={() => selectedCategoryHandler(item.name)}
           >

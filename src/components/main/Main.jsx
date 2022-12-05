@@ -21,9 +21,7 @@ const Main = () => {
     } 
 
     getData()
-
-    // ApiService.fetching('search').then(data => setVideos(data))
-  }, [])
+  }, [selectedCategory])
 
   const selectedCategoryHandler = (category) => {
     setSelectedCategory(category)
