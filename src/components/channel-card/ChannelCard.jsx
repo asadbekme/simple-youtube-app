@@ -28,14 +28,14 @@ const ChannelCard = ({ video }) => {
           alt={video?.snippet?.title} 
           sx={{
             borderRadius: '50%',
-            height: '180px',
-            width: '180px',
+            height: '160px',
+            width: '160px',
             mb: 2,
             border: '1px solid #e3e3e3'
           }}
         />
         <Typography variant={'h6'}>
-          {video?.snippet?.title} 
+          {video?.snippet?.title.slice(0, 44) + '...'} 
           <CheckCircle sx={{ fontSize: '14px', color: 'gray', ml: '5px' }} />
         </Typography>
         {

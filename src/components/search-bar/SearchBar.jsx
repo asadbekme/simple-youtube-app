@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import { Paper, IconButton } from '@mui/material'
 import { Search } from '@mui/icons-material'
-import { colors } from '../../constants/colors'
 import { useNavigate } from 'react-router-dom'
+import { colors } from '../../constants/colors'
  
 const SearchBar = () => {
   const [value, setValue] = useState('')
@@ -13,6 +13,7 @@ const SearchBar = () => {
     // console.log(value)
     if (value) {
       navigate(`/search/${value}`)
+      setValue('')
     }
   }
 

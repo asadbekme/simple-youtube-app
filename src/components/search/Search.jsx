@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { ApiService } from '../../service/apiService';
 import { colors } from '../../constants/colors'
+import Videos from '../videos/Videos'
 
 const Search = () => {
   const [videos, setVideos] = useState([])
@@ -12,7 +13,7 @@ const Search = () => {
     const getData = async () => {
       try {
         const data = await ApiService.fetching(`search?part=snippet&q=${id}`)
-        console.log(data.items)
+        // console.log(data.items)
         setVideos(data.items)
       } catch (error) {
         console.log(error)
@@ -28,7 +29,7 @@ const Search = () => {
 				<Typography variant={'h4'} fontWeight={'bold'} mb={2}>
 					Search results for <span style={{ color: colors.secondary }}>{id}</span> videos
 				</Typography>
-				{/* <Videos videos={videos} /> */}
+				<Videos videos={videos} />
 			</Container>
 		</Box>
   )
