@@ -20,12 +20,12 @@
   background-color: transparent;
 }
 
-ul, 
+ul,
 ol {
   list-style: none;
 }
 
-a, 
+a,
 button {
   cursor: pointer;
 }
@@ -51,12 +51,12 @@ button {
 }
 
 .category-btn:hover {
-  background: #76323F !important;
+  background: #76323f !important;
   color: white !important;
 }
 
 .category-btn:hover span {
-  color: white !important; 
+  color: white !important;
 }
 
 /* Media queries */

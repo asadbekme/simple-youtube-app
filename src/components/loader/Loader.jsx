@@ -1,18 +1,18 @@
-import { Box, Stack, CircularProgress } from '@mui/material'
+import { Box, Stack, CircularProgress } from "@mui/material";
 
 const Loader = () => {
   return (
-    <Box minHeight={'90vh'}>
+    <Box minHeight={"90vh"}>
       <Stack
-        direction={'row'}
-        justifyContent={'center'}
-        alignItems={'center'}
-        height={'60vh'}
+        direction={"row"}
+        justifyContent={"center"}
+        alignItems={"center"}
+        height={"60vh"}
       >
         <CircularProgress />
       </Stack>
     </Box>
-  )
-}
+  );
+};
 
-export default Loader
+export default Loader;

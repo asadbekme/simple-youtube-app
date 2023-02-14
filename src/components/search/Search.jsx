@@ -1,38 +1,39 @@
-import { Box, Container, Typography } from '@mui/material'
-import { useState, useEffect } from 'react'
-import { useParams } from 'react-router-dom'
-import { ApiService } from '../../service/apiService';
-import { colors } from '../../constants/colors'
-import Videos from '../videos/Videos'
+import { Box, Container, Typography } from "@mui/material";
+import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import { ApiService } from "../../service/apiService";
+import { colors } from "../../constants/colors";
+import { Videos } from "../";
 
 const Search = () => {
-  const [videos, setVideos] = useState([])
-  const { id } = useParams()
+  const [videos, setVideos] = useState([]);
+  const { id } = useParams();
 
   useEffect(() => {
     const getData = async () => {
       try {
-        const data = await ApiService.fetching(`search?part=snippet&q=${id}`)
+        const data = await ApiService.fetching(`search?part=snippet&q=${id}`);
         // console.log(data.items)
-        setVideos(data.items)
+        setVideos(data.items);
       } catch (error) {
-        console.log(error)
+        console.log(error);
       }
-    }
+    };
 
-    getData()
-  }, [id])
+    getData();
+  }, [id]);
 
   return (
-    <Box p={2} sx={{ height: '90vh' }}>
-			<Container maxWidth={'90%'}>
-				<Typography variant={'h4'} fontWeight={'bold'} mb={2}>
-					Search results for <span style={{ color: colors.secondary }}>{id}</span> videos
-				</Typography>
-				<Videos videos={videos} />
-			</Container>
-		</Box>
-  )
-}
+    <Box p={2} sx={{ height: "90vh" }}>
+      <Container maxWidth={"90%"}>
+        <Typography variant={"h4"} fontWeight={"bold"} mb={2}>
+          Search results for{" "}
+          <span style={{ color: colors.secondary }}>{id}</span> videos
+        </Typography>
+        <Videos videos={videos} />
+      </Container>
+    </Box>
+  );
+};
 
-export default Search
+export default Search;
