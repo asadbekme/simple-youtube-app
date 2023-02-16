@@ -15,56 +15,57 @@ import {
 
 export const logo = `https://download.logo.wine/logo/YouTube/YouTube-Logo.wine.png`;
 
-export const category = [{
+export const category = [
+  {
     name: 'New',
-    icon: < Home / >
+    icon: <Home />
   },
   {
     name: 'Movie',
-    icon: < OndemandVideo / >
+    icon: <OndemandVideo />
   },
   {
     name: 'Live',
-    icon: < LiveTv / >
+    icon: <LiveTv />
   },
   {
     name: 'Gaming',
-    icon: < SportsEsports / >
+    icon: <SportsEsports />
   },
   {
     name: 'Education',
-    icon: < School / >
+    icon: <School />
   },
   {
     name: 'Sport',
-    icon: < FitnessCenter / >
+    icon: <FitnessCenter />
   },
   {
     name: 'Comedy',
-    icon: < TheaterComedy / >
+    icon: <TheaterComedy />
   },
   {
     name: 'Podcast',
-    icon: < GraphicEq / >
+    icon: <GraphicEq />
   },
   {
     name: 'Fashion',
-    icon: < Checkroom / >
+    icon: <Checkroom />
   },
   {
     name: 'Crypto',
-    icon: < DeveloperMode / >
+    icon: <DeveloperMode />
   },
   {
     name: 'Gym',
-    icon: < FitnessCenter / >
+    icon: <FitnessCenter />
   },
   {
     name: 'Beauty',
-    icon: < FaceRetouchingNatural / >
+    icon: <FaceRetouchingNatural />
   },
   {
     name: 'Music',
-    icon: < MusicNote / >
+    icon: <MusicNote />
   },
 ];

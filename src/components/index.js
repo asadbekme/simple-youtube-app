@@ -1,3 +1,4 @@
+export { default as App } from './app/App';
 export { default as Category } from './category/Category';
 export { default as Channel } from './channel/Channel';
 export { default as ChannelCard } from './channel-card/ChannelCard';
