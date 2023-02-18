@@ -24,7 +24,6 @@ const SearchBar = () => {
         border: `1px solid ${colors.secondary}`,
         pl: 2,
         boxShadow: "none",
-        mr: 5,
       }}
     >
       <input

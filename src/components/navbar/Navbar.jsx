@@ -10,13 +10,13 @@ const Navbar = () => {
       direction={"row"}
       alignItems={"center"}
       justifyContent={"space-between"}
+      p={1}
       sx={{
         position: "sticky",
         top: 0,
         zIndex: 1000,
         background: colors.primary,
       }}
-      p={1}
     >
       <Link to={"/"}>
         <img src={logo} alt="Logo" width={121} />
